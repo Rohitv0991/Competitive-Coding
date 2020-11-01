@@ -29,20 +29,20 @@ class Solution {
         return count;
         
         
-        
-		/* naive approach
+	/* naive approach
 		
-		int count = 0;
-		for(int i = 0; i < s.length(); i++) {
-            int tempCount = 0;
-            HashSet<Character> set = new HashSet<>();
-            
-            for(int j = i; j < s.length(); j++) {
-                if(set.contains(s.charAt(j))) break;
-                set.add(s.charAt(j));
-                tempCount++;
-            }
-            count = tempCount > count? tempCount : count;
+	int count = 0;
+	
+	for(int i = 0; i < s.length(); i++) {
+	    int tempCount = 0;
+	    HashSet<Character> set = new HashSet<>();
+	    
+	    for(int j = i; j < s.length(); j++) {
+		if(set.contains(s.charAt(j))) break;
+		set.add(s.charAt(j));
+		tempCount++;
+	    }
+	    count = tempCount > count? tempCount : count;
         }
         return count;*/
     }
